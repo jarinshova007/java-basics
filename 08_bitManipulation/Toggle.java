@@ -1,4 +1,4 @@
-// // Write a program to toggle a bit a position = “pos” in a number “n”
+// Write a program to toggle a bit a position = “pos” in a number “n”
 import java.util.Scanner;
 
 public class Toggle {
