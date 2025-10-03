@@ -28,9 +28,9 @@ public class Strings {
         char A = 'A';
         System.out.println((int)A);
         char space = ' ';
+        System.out.println((int)space); // will print 32
         int spaces = ' ';
-        System.out.println((int)space);
-        System.out.println((char)spaces); // what about this??
+        System.out. println((char)spaces); // will print a space (' ');
         
         // compare
         if (firstName.compareTo(lastName) == 0) {
