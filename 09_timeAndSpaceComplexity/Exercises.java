@@ -233,20 +233,4 @@ public class Exercises {
      * Time Complexity: O(n)
      * Space Complexity: O(n) (recursive stack)
      */
-
-    // MAIN for testing
-    public static void main(String[] args) {
-        int arr[] = { 1, 2, 3, 4, 5 };
-
-        System.out.println("Sum of N = " + sumOfN(5));
-        System.out.println("Max = " + findMax(arr));
-        System.out.println("Digit count of 12345 = " + countDigits(12345));
-        System.out.println("Contains duplicate? " + containsDuplicate(arr));
-        System.out.println("Binary Search for 3 = " + binarySearch(arr, 3));
-        System.out.println("Factorial of 5 = " + fact(5));
-        System.out.println("Fibonacci of 5 = " + fib(5));
-        twoPointerPairSum(arr, 6);
-        System.out.println("Is Palindrome (Iterative): " + isPalindromeIterative("madam"));
-        System.out.println("Is Palindrome (Recursive): " + isPalindromeRecursive("madam", 0, 4));
-    }
 }
