@@ -5,8 +5,8 @@ public class BubbleSort {
         }
     }
     public static void main(String[] args) {
-        int arr[] = {5, 8, 9, 6, 2, 1, 3};
-        
+        int arr[] = { 5, 8, 9, 6, 2, 1, 3 };
+
         // bubble sorting
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
