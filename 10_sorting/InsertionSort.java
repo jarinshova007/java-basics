@@ -9,7 +9,7 @@ public class InsertionSort {
         int arr[] = {3, 8, 15, 13, 4, 1, 6};
 
         // insertion sorting
-        // time complexity = O()
+        // time complexity = O(n^2)
         // traverse in unsorted part
         for (int i = 1; i < arr.length - 1; i++) {
             int current = arr[i];
