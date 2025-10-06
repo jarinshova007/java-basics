@@ -8,6 +8,7 @@ public class BubbleSort {
         int arr[] = { 5, 8, 9, 6, 2, 1, 3 };
 
         // bubble sorting
+        // time complexity = O(n^2)
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
