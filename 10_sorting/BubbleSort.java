@@ -7,6 +7,8 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         int arr[] = {5, 8, 19, 6, 12, 1, 3};
+        printArray(arr);
+        System.out.println();
 
         // bubble sorting
         // time complexity = O(n^2)
