@@ -18,7 +18,7 @@ public class ReverseSB {
         // Reverse the string
         System.out.println(sb.reverse());// again Hello World
         
-        // String Builder to lower/upper Case
+        // String Builder to lower/upper case
         System.out.println(sb.toString().toLowerCase());  // hello world
         System.out.println(sb.toString().toUpperCase());  // HELLO WORLD
     }
