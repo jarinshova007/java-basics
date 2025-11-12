@@ -5,15 +5,21 @@ public class ReverseSB {
         StringBuilder sb = new StringBuilder(str);
 
         // manual reverse
-        for (int i = 0; i <= sb.length() / 2; i++) {
-            char temp = sb.charAt(i);
-            sb.setCharAt(i, sb.charAt(sb.length() - 1 - i));
-            sb.setCharAt(sb.length() - 1 - i, temp);
+        for (int i = 0; i < sb.length() / 2; i++) {
+            char front = sb.charAt(i);
+            char back = sb.charAt(sb.length ()- i - 1);
+
+            // set char
+            sb.setCharAt(i, back);
+            sb.setCharAt(sb.length() - 1 - i, front);
         }
         System.out.println(sb);
-
+        
         // Reverse the string
-        sb.reverse();
-        System.out.println(sb); // again Hello World
+        System.out.println(sb.reverse());// again Hello World
+        
+        // String Builder to lower/upper Case
+        System.out.println(sb.toString().toLowerCase());  // hello world
+        System.out.println(sb.toString().toUpperCase());  // HELLO WORLD
     }
 }
