@@ -2,41 +2,47 @@
 import java.util.Scanner;
 
 public class TransposeArray {
+    public static void printArray(int arr[][]) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("row: ");
-        int row = sc.nextInt(); // 5
-        System.out.print("col: ");
-        int col = sc.nextInt(); // 6
+        System.out.print("row = ");
+        int row = sc.nextInt();
+        System.out.print("col = ");
+        int col = sc.nextInt();
 
-        int arr[][] = new int[row][col];
+        int array[][] = new int[row][col];
 
-        // input
-        System.out.println("Array:");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                arr[i][j] = sc.nextInt();
+                array[i][j] = sc.nextInt();
             }
         }
 
         // create transpose array
         int transpose[][] = new int[col][row];
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                transpose[j][i] = arr[i][j];
-            }
-        }
 
-        // output transpose array
-        System.out.println("Transpose Array:");
-        for (int i = 0; i < col; i++) {
+        for(int i = 0; i < col; i++) {
             for (int j = 0; j < row; j++) {
-                System.out.print(transpose[i][j] + " ");
+                transpose[i][j] = array[j][i];
             }
-            System.out.println();
         }
 
+        // output array
+        System.out.println("array:");
+        printArray(array);
+        System.out.println();
+        // output transpose array
+        System.out.println("transpose array:");
+        printArray(transpose);
+        
         sc.close();
         
     }
