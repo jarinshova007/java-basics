@@ -9,7 +9,8 @@ public class Strings {
         String lastName = sc.nextLine();
 
         // Concatenation (Joining 2 strings)
-        String fullName = firstName + " " + lastName;
+        //String fullName = firstName + " " + lastName;
+        String fullName = firstName.concat(lastName);
         System.out.println("Full Name: " + fullName);
 
         // size

@@ -13,7 +13,7 @@ public class StringBuilders {
         sb.setCharAt(0, 'T');
         System.out.println("set char: " + sb); // Topy
 
-        // insert character
+        // insert character / String
         sb.insert(2, 'p');
         System.out.println("insert: " + sb); // Toppy
 
@@ -21,7 +21,12 @@ public class StringBuilders {
         sb.delete(3, 5);
         System.out.println("delete char: " + sb); // Top
 
-        // Append char and String (to add something at the end)
+        // deleteCharAt(idx);
+        sb.deleteCharAt(1);
+        System.out.println("deleteCharAt: " + sb); //Tp
+        sb.insert(1, 'o'); // again adding the 'o', sothat sb becomes Top
+
+        // Append char / String (to add something at the end)
         sb.append('p');
         System.out.println("append char: " + sb); // Topp
         System.out.println("append string: " + sb.append("er")); // Topper

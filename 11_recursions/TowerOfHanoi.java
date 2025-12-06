@@ -18,6 +18,6 @@ public class TowerOfHanoi {
         int n = sc.nextInt();
 
         // method call
-        towerOfHanoi(n, "S", "H", "D");
+        towerOfHanoi(n, "S", "H", "D"); // time complexity : O(2^n - 1)
     }
 }

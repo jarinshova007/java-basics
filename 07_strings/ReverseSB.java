@@ -7,7 +7,7 @@ public class ReverseSB {
         // manual reverse
         for (int i = 0; i < sb.length() / 2; i++) {
             char front = sb.charAt(i);
-            char back = sb.charAt(sb.length ()- i - 1);
+            char back = sb.charAt(sb.length () - i - 1);
 
             // set char
             sb.setCharAt(i, back);
