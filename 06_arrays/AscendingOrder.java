@@ -3,6 +3,16 @@
 import java.util.Scanner;
 
 public class AscendingOrder {
+    /* in method style
+    static boolean isAscending(int arr[]) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("size: ");
@@ -14,21 +24,27 @@ public class AscendingOrder {
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextInt();
         }
-        
-        boolean isAscending = true;
+
+        /* manual way
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > (arr[i + 1])) {
+                System.out.println("descending");
+                return;
+            } 
+        } 
+         */
 
         // traverse
-        int min = arr[0];
-        for (int i = 1; i < size; i++) {
-            if (arr[i] < min) {
+        boolean isAscending  = true;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
                 isAscending = false;
             }
-            min = arr[i];
         }
         if (isAscending) {
-            System.out.println("The array is in ascending number");
+            System.out.println("The array is in ascending order");
         } else {
-            System.out.println("The array is not in ascending number");
+            System.out.println("The array is not in ascending order"); // in descending order
         }
 
         sc.close();

@@ -7,21 +7,17 @@ public class ArrayOfNames {
         Scanner sc = new Scanner(System.in);
         System.out.print("size: ");
         int size = sc.nextInt();
+        sc.nextLine();  // there created a new line to balance that a next line is taken here. Otherwise, program will count it an empty string
+        
+        // array of string
         String names[] = new String[size];
 
-        // input
-        System.out.println("Names:");
+        //input and print
         for (int i = 0; i < size; i++) {
-            System.out.print((i + 1) + ". ");
-            names[i] = sc.next();
+            names[i] = sc.nextLine();
         }
-
-        // output
-        for (int i = 0; i < size; i++) {
-            System.out.println("Name " + (i + 1) + " is " + names[i]);
+        for (int i = 0; i < names.length; i++) {
+            System.out.println("name " + (i + 1) + " is " + names[i]);
         }
-
-        sc.close();
-
     }
 }
