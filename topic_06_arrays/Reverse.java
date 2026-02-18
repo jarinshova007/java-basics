@@ -2,7 +2,7 @@
 // Reverse an array
 import java.util.Scanner;
 
-public class ReverseAnArray {
+public class Reverse {
     // printArray method
     public static void printArray(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
