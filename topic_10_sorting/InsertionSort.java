@@ -5,11 +5,13 @@ public class InsertionSort {
             System.out.print(array[i] + " ");
         }
     }
+
     public static void main(String[] args) {
-        int arr[] = {3, 8, 15, 13, 4, 1, 6};
+        int arr[] = { 1, 2, 3, 4 };
         printArray(arr);
         System.out.println();
 
+        int c = 0;
         // insertion sort
         // time complexity = O(n^2)
         // traverse in unsorted part
@@ -20,10 +22,12 @@ public class InsertionSort {
             while (j >= 0 && current < arr[j]) {
                 arr[j + 1] = arr[j];
                 j--;
+                c++;
             }
             arr[j + 1] = current;
         }
         // method call
         printArray(arr);
+        System.out.println("c = " + c);
     }
 }
