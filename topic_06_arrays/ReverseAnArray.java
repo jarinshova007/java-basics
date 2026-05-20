@@ -13,6 +13,27 @@ public class ReverseAnArray {
         }
     }
 
+    // iterative way
+    // public static int[] reverseIterate(int arr[]) {
+    // // new array
+    // int newArray[] = new int[arr.length];
+
+    // for (int i = 0; i < arr.length; i++) {
+    // newArray[i] = arr[arr.length - i - 1];
+    // }
+
+    // return newArray;
+    // }
+
+    // recursive way
+    // public static int[] reverseRecursive(int arr[], int idx, int arrN[]) {
+    // if (idx == arr.length) {
+    // return arrN;
+    // }
+    // arrN[idx] = arr[arr.length - idx - 1];
+    // return reverseRecursive(arr, idx + 1, arrN);
+    // }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("size = ");
@@ -45,6 +66,13 @@ public class ReverseAnArray {
             arr[left] = arr[right];
             arr[right] = temp;
         }
+
+        // iterative method call
+        // arr = reverseIterate(arr);
+
+        // recursive method call
+        // int reversed[] = new int[arr.length];
+        // reversed = reverseRecursive(arr, 0, reversed);
 
         // print
         printArray(arr);
