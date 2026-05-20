@@ -10,12 +10,18 @@ public class EligibleOrNot {
         }
         return true;
     }
+
+    // different way
+    // public static boolean isEligible(int age) {
+    // return age > 18;
+    // }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("age: ");
         int age = sc.nextInt();
 
-        if(isEligible(age)) {
+        if (isEligible(age)) {
             System.out.println("That person is eligible to vote");
         } else {
             System.out.println("That person is not eligible to vote");
