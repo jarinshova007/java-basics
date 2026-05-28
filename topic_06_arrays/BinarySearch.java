@@ -21,8 +21,6 @@ public class BinarySearch {
     }
 
     // recursive way
-    static int idx = 0;
-
     public static int recursive(int arr[], int target, int start, int end) {
         if (start > end) {
             return -1;
