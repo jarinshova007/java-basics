@@ -1,8 +1,35 @@
+
 // find an integer number x from a 1D array
 import java.util.Scanner;
 
 public class LinearSearch {
-public static void main(String[] args) {
+    // iterative way
+    public static void iterative(int arr[], int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                System.out.print("found at index " + i);
+                return;
+            }
+        }
+        System.out.println("not found");
+    }
+
+    // recursive way
+    static int idx = 0;
+
+    public static int recursive(int arr[], int target, int idx) {
+        if (idx == arr.length) {
+            return -1;
+        }
+
+        if (arr[idx] == target) {
+            return idx;
+        }
+
+        return recursive(arr, target, idx + 1);
+    }
+
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("size = ");
         int size = sc.nextInt();
@@ -11,16 +38,28 @@ public static void main(String[] args) {
         for (int i = 0; i < size; i++) {
             array[i] = sc.nextInt();
         }
-        System.out.print("x = ");
-        int x = sc.nextInt();
+        System.out.print("target = ");
+        int target = sc.nextInt();
+
         // search
         for (int i = 0; i < size; i++) {
-            if (array[i] == x) {
-                System.out.println(x + " is found at index: " + i);
+            if (array[i] == target) {
+                System.out.println(target + " is found at index: " + i);
                 return;
             }
         }
 
-        System.out.println(x + " is not found");
+        System.out.println(target + " is not found");
+
+        // iterative method call
+        // iterative(array, target);
+
+        // recursive method call
+        // if (recursive(array, target, idx) >= 0) {
+        // System.out.println("found at idx " + recursive(array, target, idx));
+        // } else {
+        // System.out.println("not found");
+        // }
+
     }
 }
