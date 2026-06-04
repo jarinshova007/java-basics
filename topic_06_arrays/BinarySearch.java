@@ -2,9 +2,6 @@ import java.util.Scanner;
 
 public class BinarySearch {
     // iterative way
-    // space complexity - O(1) // (in terms of space, it is more optimized compared
-    // to the recursive approach)
-    // time complexity - O(log(n))
     public static int iterative(int arr[], int target) {
         int st = 0;
         int end = arr.length - 1;
@@ -24,9 +21,6 @@ public class BinarySearch {
     }
 
     // recursive way
-    // space complexity - O(log(n)) // (in terms of space, it is less optimized
-    // compared to the iterative approach)
-    // time complexity - O(log(n))
     public static int recursive(int arr[], int target, int start, int end) {
         if (start > end) {
             return -1;
