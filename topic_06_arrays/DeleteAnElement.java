@@ -52,9 +52,11 @@ public class DeleteAnElement {
         // // find element method call
         // int idx = findIndex(arr, ele);
 
+        // if it is the last element
         if (idx == size - 1) {
             size--;
         } else {
+            // left shift
             for (int i = idx; i < size - 1; i++) {
                 arr[i] = arr[i + 1];
             }
