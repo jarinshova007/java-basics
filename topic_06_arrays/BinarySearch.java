@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//Time Complexity: O(log n)
 
 public class BinarySearch {
     // iterative way

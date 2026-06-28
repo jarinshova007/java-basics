@@ -1,17 +1,17 @@
 
 // find an integer number x from a 1D array
 import java.util.Scanner;
+//Time Complexity: O(n)
 
 public class LinearSearch {
     // iterative way
-    public static void iterative(int arr[], int target) {
+    public static int linearSearch(int arr[], int target) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == target) {
-                System.out.print("found at index " + i);
-                return;
+                return i;
             }
         }
-        System.out.println("not found");
+        return -1;
     }
 
     // recursive way
@@ -52,14 +52,19 @@ public class LinearSearch {
         System.out.println(target + " is not found");
 
         // iterative method call
-        // iterative(array, target);
+        // if (linearSearch(array, target) != -1) {
+        // System.out.println("found at idx " + linearSearch(array, target));
+        // } else {
+        // System.out.println("not found");
+        // }
 
         // recursive method call
-        // if (recursive(array, target, idx) >= 0) {
+        // if (recursive(array, target, idx) != -1) {
         // System.out.println("found at idx " + recursive(array, target, idx));
         // } else {
         // System.out.println("not found");
         // }
 
+        sc.close();
     }
 }
